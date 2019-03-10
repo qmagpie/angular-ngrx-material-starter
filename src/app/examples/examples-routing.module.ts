@@ -11,6 +11,7 @@ import { StockMarketContainerComponent } from './stock-market/components/stock-m
 import { CrudComponent } from './crud/components/crud.component';
 import { FormComponent } from './form/components/form.component';
 import { NotificationsComponent } from './notifications/components/notifications.component';
+import { TableComponent } from './table/components/table.component';
 
 const routes: Routes = [
   {
@@ -56,6 +57,11 @@ const routes: Routes = [
         path: 'notifications',
         component: NotificationsComponent,
         data: { title: 'anms.examples.menu.notifications' }
+      },
+      {
+        path: 'table',
+        component: TableComponent,
+        data: { title: 'anms.examples.menu.table' }
       },
       {
         path: 'authenticated',

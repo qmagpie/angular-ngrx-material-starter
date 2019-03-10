@@ -17,6 +17,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -115,6 +117,8 @@ import { RtlSupportDirective } from './rtl-support/rtl-support.directive';
     MatListModule,
     MatMenuModule,
     MatIconModule,
+    MatPaginatorModule,
+    MatTableModule,
     MatTooltipModule,
     MatSnackBarModule,
     MatSlideToggleModule,
@@ -147,6 +151,8 @@ import { RtlSupportDirective } from './rtl-support/rtl-support.directive';
     MatSelectModule,
     MatToolbarModule,
     MatIconModule,
+    MatPaginatorModule,
+    MatTableModule,
     MatTooltipModule,
     MatSnackBarModule,
     MatSlideToggleModule,

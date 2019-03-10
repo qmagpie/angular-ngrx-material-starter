@@ -1,0 +1,45 @@
+.main-heading {
+  // text-transform: uppercase;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+}
+
+.table-container {
+  margin-bottom: 1em;
+}
+
+.mat-table .mat-header-cell {
+  text-transform: uppercase;
+}
+
+.mat-row {
+  min-height: 36px;
+}
+
+/* column widths, see: https://stackoverflow.com/questions/45159066/md-table-how-to-update-the-column-width */
+.mat-column-position {
+  flex: 0 0 110px;
+}
+
+.mat-column-name {
+  min-width: 100px;
+  max-width: 900px;
+  flex-basis: auto; /* default value */
+  flex-grow: 1;
+}
+
+.mat-column-weight {
+  flex: 0 0 130px;
+}
+
+.mat-column-symbol {
+  flex: 0 0 360px;
+}
+
+.mat-row:hover {
+  background-color: #eff2f5;
+}

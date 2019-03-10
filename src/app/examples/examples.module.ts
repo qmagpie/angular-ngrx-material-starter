@@ -25,6 +25,7 @@ import { FormEffects } from './form/form.effects';
 import { AuthenticatedComponent } from './authenticated/authenticated.component';
 import { NotificationsComponent } from './notifications/components/notifications.component';
 import { ExamplesEffects } from './examples.effects';
+import { TableComponent } from './table/components/table.component';
 
 @NgModule({
   imports: [
@@ -56,7 +57,8 @@ import { ExamplesEffects } from './examples.effects';
     AuthenticatedComponent,
     CrudComponent,
     FormComponent,
-    NotificationsComponent
+    NotificationsComponent,
+    TableComponent
   ],
   providers: [StockMarketService]
 })
