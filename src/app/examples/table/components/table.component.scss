@@ -22,22 +22,18 @@ table {
 
 /* column widths, see: https://stackoverflow.com/questions/45159066/md-table-how-to-update-the-column-width */
 .mat-column-position {
-  flex: 0 0 110px;
+  width: 110px;
 }
 
 .mat-column-name {
-  min-width: 100px;
-  max-width: 900px;
-  flex-basis: auto; /* default value */
-  flex-grow: 1;
 }
 
 .mat-column-weight {
-  flex: 0 0 130px;
+  width: 130px;
 }
 
 .mat-column-symbol {
-  flex: 0 0 360px;
+  width: 360px;
 }
 
 .mat-row:hover {
