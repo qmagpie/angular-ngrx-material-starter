@@ -23,6 +23,7 @@
 @import 'app/examples/theming/parent/parent.component.scss-theme';
 @import 'app/examples/theming/child/child.component.scss-theme';
 @import 'app/examples/examples/examples.component.scss-theme';
+@import 'app/examples/table/components/table.component.scss-theme';
 
 @mixin custom-components-theme($theme) {
   @include anms-styles-reset-theme($theme);
@@ -35,6 +36,7 @@
   @include anms-parent-component-theme($theme);
   @include anms-child-component-theme($theme);
   @include anms-examples-component-theme($theme);
+  @include anms-table-component-theme($theme);
 }
 
 .default-theme {

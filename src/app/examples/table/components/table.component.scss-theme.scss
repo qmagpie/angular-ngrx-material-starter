@@ -1,0 +1,14 @@
+@import '~@angular/material/theming';
+
+// see: https://medium.com/@tomastrajan/the-complete-guide-to-angular-material-themes-4d165a9d24d1
+// and there: Theming our custom components
+
+@mixin anms-table-component-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+
+  .mat-row:hover {
+    // background-color: mat-color($accent, lighter);
+    background-color: mat-color($accent, 200);
+  }
+}
