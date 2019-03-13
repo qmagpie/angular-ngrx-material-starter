@@ -1,3 +1,5 @@
+import { HttpErrorResponse } from '@angular/common/http';
+
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -6,4 +8,10 @@ export interface PeriodicElement {
   family: string;
   bondingType: string;
   standardState: string;
+}
+
+export interface TableState {
+  loading: boolean;
+  elements?: Array<PeriodicElement>;
+  error?: HttpErrorResponse;
 }

@@ -27,6 +27,7 @@ import { AuthenticatedComponent } from './authenticated/authenticated.component'
 import { NotificationsComponent } from './notifications/components/notifications.component';
 import { ExamplesEffects } from './examples.effects';
 import { TableComponent } from './table/components/table.component';
+import { TableEffects } from './table/table.effects';
 
 @NgModule({
   imports: [
@@ -46,7 +47,8 @@ import { TableComponent } from './table/components/table.component';
       TodosEffects,
       StockMarketEffects,
       BooksEffects,
-      FormEffects
+      FormEffects,
+      TableEffects
     ])
   ],
   declarations: [

@@ -6,8 +6,13 @@ import {
 } from '@angular/core';
 import { MatPaginator, MatTableDataSource } from '@angular/material';
 
+import { Observable } from 'rxjs';
+import { Store, select } from '@ngrx/store';
+
 import { PeriodicElement } from '../table.model';
-import { TableService } from '../table.service';
+import { State } from '../../examples.state';
+import { selectElements } from '../table.selectors';
+import { ActionPeriodicElementsRetrieve } from '../table.actions';
 
 @Component({
   selector: 'anms-table',
@@ -16,7 +21,7 @@ import { TableService } from '../table.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TableComponent implements OnInit {
-  constructor(private tableService: TableService) {}
+  constructor(public store: Store<State>) {}
 
   displayedColumns: string[] = [
     'position',
@@ -28,17 +33,17 @@ export class TableComponent implements OnInit {
     'standardState'
   ];
   dataSource = new MatTableDataSource<PeriodicElement>();
+  elements$: Observable<Array<PeriodicElement>>;
 
   @ViewChild(MatPaginator)
   paginator: MatPaginator;
 
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
-    this.tableService
-      .fetchElements()
-      .pipe()
-      .subscribe(data => {
-        this.dataSource.data = data;
-      });
+
+    this.store.pipe(select(selectElements)).subscribe(data => {
+      this.dataSource.data = data;
+    });
+    this.store.dispatch(new ActionPeriodicElementsRetrieve());
   }
 }

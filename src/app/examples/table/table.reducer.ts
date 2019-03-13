@@ -1,13 +1,42 @@
-import { TableActions, TableActionTypes } from './table.actions';
+import { TableState } from './table.model';
+import {
+  PeriodicElementsActions,
+  PeriodicElementsActionTypes
+} from './table.actions';
 
-export interface State {}
+export const initialState: TableState = {
+  loading: false,
+  elements: []
+};
 
-export const initialState: State = {};
-
-export function reducer(state = initialState, action: TableActions): State {
+export function tableReducer(
+  state: TableState = initialState,
+  action: PeriodicElementsActions
+): TableState {
   switch (action.type) {
-    case TableActionTypes.LoadTables:
-      return state;
+    case PeriodicElementsActionTypes.RETRIEVE:
+      return {
+        ...state,
+        loading: true,
+        elements: [],
+        error: null
+      };
+
+    case PeriodicElementsActionTypes.RETRIEVE_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        elements: action.payload.elements,
+        error: null
+      };
+
+    case PeriodicElementsActionTypes.RETRIEVE_ERROR:
+      return {
+        ...state,
+        loading: false,
+        elements: [],
+        error: action.payload.error
+      };
 
     default:
       return state;

@@ -9,6 +9,8 @@ import { bookReducer } from './crud/books.reducer';
 import { formReducer } from './form/form.reducer';
 import { FormState } from './form/form.model';
 import { Book, BookState } from './crud/books.model';
+import { TableState } from './table/table.model';
+import { tableReducer } from './table/table.reducer';
 
 export const FEATURE_NAME = 'examples';
 export const selectExamples = createFeatureSelector<State, ExamplesState>(
@@ -18,7 +20,8 @@ export const reducers: ActionReducerMap<ExamplesState> = {
   todos: todosReducer,
   stocks: stockMarketReducer,
   books: bookReducer,
-  form: formReducer
+  form: formReducer,
+  table: tableReducer
 };
 
 export interface ExamplesState {
@@ -26,6 +29,7 @@ export interface ExamplesState {
   stocks: StockMarketState;
   form: FormState;
   books: BookState;
+  table: TableState;
 }
 
 export interface State extends AppState {
