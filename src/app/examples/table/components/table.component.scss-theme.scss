@@ -7,8 +7,9 @@
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
 
-  .mat-row:hover {
-    // background-color: mat-color($accent, lighter);
-    background-color: mat-color($accent, 200);
+  .mat-row:hover td {
+    color: mat-color($accent, lighter-contrast);
+    background-color: mat-color($accent, lighter);
   }
+
 }
