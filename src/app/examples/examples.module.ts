@@ -16,6 +16,7 @@ import { TodosEffects } from './todos/todos.effects';
 import { StockMarketContainerComponent } from './stock-market/components/stock-market-container.component';
 import { StockMarketEffects } from './stock-market/stock-market.effects';
 import { StockMarketService } from './stock-market/stock-market.service';
+import { TableService } from './table/table.service';
 import { ParentComponent } from './theming/parent/parent.component';
 import { ChildComponent } from './theming/child/child.component';
 import { CrudComponent } from './crud/components/crud.component';
@@ -60,7 +61,7 @@ import { TableComponent } from './table/components/table.component';
     NotificationsComponent,
     TableComponent
   ],
-  providers: [StockMarketService]
+  providers: [StockMarketService, TableService]
 })
 export class ExamplesModule {
   constructor() {}

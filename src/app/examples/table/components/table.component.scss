@@ -30,10 +30,24 @@ table {
 
 .mat-column-weight {
   width: 130px;
+  text-align: right;
+  padding-right: 2em;
 }
 
 .mat-column-symbol {
-  width: 360px;
+  width: 110px;
+}
+
+.mat-column-family {
+  width: 240px;
+}
+
+.mat-column-bondingType {
+  width: 160px;
+}
+
+.mat-column-standardState {
+  width: 160px;
 }
 
 .mat-row:hover {
