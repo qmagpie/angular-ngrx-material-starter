@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { TableEffects } from './table.effects';
 
 describe('TableEffects', () => {
-  let actions$: Observable<any>;
+  const actions$: Observable<any> = null;
   let effects: TableEffects;
 
   beforeEach(() => {
